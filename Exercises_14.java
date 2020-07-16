@@ -12,8 +12,34 @@ Example
 "aA11" -> 2 # 'a' and '1'
 "ABBA" -> 2 # 'A' and 'B' each occur twice */
 
+import java.util.ArrayList;
+
 public class Exercises_14 {
     public static void main(String[] args) {
-
+        System.out.println(duplicateCount("abcde"));
     }
+
+    public static int duplicateCount(String text) {
+
+        int buffer = 0;
+        String s = text.toLowerCase();
+        ArrayList<Character> characters = new ArrayList<>();
+        char [] textIn = s.toCharArray();
+
+        for (int i = 0; i < textIn.length; i++) {
+
+            for (int j = buffer; j < textIn.length; j++) {
+                if (textIn[i] == textIn[j] && i != j ){
+
+                    if (!characters.contains(textIn[i])){
+                        characters.add(textIn[i]);
+                    }
+                }
+            }
+            buffer++;
+        }
+
+       return characters.size();
+    }
+
 }
