@@ -22,31 +22,31 @@ Example:
 
 (Condition 2) not fulfilled). */
 
- class Exercises_16 {
-     public static void main(String[] args) {
-         System.out.println(bouncingBall(30, 0.66,1.5));
-     }
+class Exercises_16 {
+    public static void main(String[] args) {
+        System.out.println(bouncingBall(30, 0.66, 1.5));
+    }
 
-     public static int bouncingBall(double h, double bounce, double window) {
+    public static int bouncingBall(double h, double bounce, double window) {
 
-         int counter = 0;
-         double bufferH = h;
+        int counter = 0;
+        double bufferH = h;
 
-         while (bufferH > window && h > 0 && bounce > 0 && bounce < 1 && window < h){
+        while (bufferH > window && h > 0 && bounce > 0 && bounce < 1 && window < h) {
 
-             if (bufferH > window && h > 0 && bounce > 0 && bounce < 1 && window < h){
-                 counter++;
-                 bufferH = bufferH * bounce;
-                 if (bufferH > window){
-                     counter++;
-                 }
-             }
-         }
-            if (h < 0 || bounce <= 0 || bounce >= 1 || window >= h){
-                counter = -1;
+            if (bufferH > window && h > 0 && bounce > 0 && bounce < 1 && window < h) {
+                counter++;
+                bufferH = bufferH * bounce;
+                if (bufferH > window) {
+                    counter++;
+                }
             }
+        }
+        if (h < 0 || bounce <= 0 || bounce >= 1 || window >= h) {
+            counter = -1;
+        }
 
-         return counter;
-     }
+        return counter;
+    }
 
 }

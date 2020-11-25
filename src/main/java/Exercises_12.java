@@ -20,14 +20,13 @@ D          500
 M          1,000
 Remember that there can't be more than 3 identical symbols in a row. */
 
-import org.jcp.xml.dsig.internal.dom.DOMUtils;
-
 public class Exercises_12 {
     public static void main(String[] args) {
         Exercises_12 exercises_12 = new Exercises_12();
         System.out.println(exercises_12.solution(1666));
         System.out.println((2658 / 1000));
     }
+
     public String solution(int n) {
         Exercises_12 exercises_12 = new Exercises_12();
         String s = exercises_12.Thousand(n) + exercises_12.ToThousand(n) + exercises_12.ToHundred(n) + exercises_12.ToTen(n);

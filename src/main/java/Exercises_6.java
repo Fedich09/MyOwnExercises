@@ -13,14 +13,14 @@ public class Exercises_6 {
         System.out.println(exercises_6.toCamelCase("the_Stealth_Warrior"));
     }
 
-    public String toCamelCase(String s){
+    public String toCamelCase(String s) {
         String output = "";
-        char [] chars = s.toCharArray();
+        char[] chars = s.toCharArray();
         ArrayList<String> strings = new ArrayList<>();
         for (int i = 0; i < chars.length; i++) {
-            if (Character.isLetter(chars[i])){
-                    strings.add(Character.toString(chars[i]));
-            }else if(!Character.isLetter(chars[i])){
+            if (Character.isLetter(chars[i])) {
+                strings.add(Character.toString(chars[i]));
+            } else if (!Character.isLetter(chars[i])) {
                 strings.add(Character.toString(Character.toUpperCase((chars[i + 1]))));
                 i++;
             }

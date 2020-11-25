@@ -36,13 +36,13 @@ public class Exercises_18 {
         try {
             for (int j = 0; j < n; j++) {
 
-                for (char c :s.toCharArray()) {
+                for (char c : s.toCharArray()) {
                     characters.add(c);
                 }
                 for (int i = 0; i < characters.size(); i++) {
-                    if (i % 2 != 0){
+                    if (i % 2 != 0) {
                         oddString = oddString + characters.get(i);
-                    } else{
+                    } else {
                         evenString = evenString + characters.get(i);
                     }
                 }
@@ -51,7 +51,7 @@ public class Exercises_18 {
                 evenString = "";
                 characters.clear();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -60,28 +60,28 @@ public class Exercises_18 {
 
     public static String decrypt(final String encryptedText, final int n) {
 
-        char [] chars;
+        char[] chars;
         String s = encryptedText;
         int buffer = 0;
         int buffer2 = 1;
         try {
             for (int j = 0; j < n; j++) {
 
-                if (j < 1){
+                if (j < 1) {
                     chars = s.toCharArray();
-                }else{
+                } else {
                     chars = s.toCharArray();
                 }
-                char [] charsUpdate = new char[chars.length];
+                char[] charsUpdate = new char[chars.length];
 
                 for (int i = chars.length / 2; i < chars.length; i++) {
-                    if (buffer % 2 == 0 && buffer <= charsUpdate.length){
+                    if (buffer % 2 == 0 && buffer <= charsUpdate.length) {
                         charsUpdate[buffer] = chars[i];
                     }
                     buffer += 2;
                 }
-                for (int i = 0; i < chars.length / 2 ; i++) {
-                    if (buffer2 % 2 != 0 && buffer2 < charsUpdate.length){
+                for (int i = 0; i < chars.length / 2; i++) {
+                    if (buffer2 % 2 != 0 && buffer2 < charsUpdate.length) {
                         charsUpdate[buffer2] = chars[i];
                     }
                     buffer2 += 2;
@@ -93,7 +93,7 @@ public class Exercises_18 {
                 buffer = 0;
                 buffer2 = 1;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 

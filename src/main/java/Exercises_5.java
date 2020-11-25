@@ -13,21 +13,21 @@ import java.util.Random;
 public class Exercises_5 {
     public static void main(String[] args) {
         Exercises_5 exercises_5 = new Exercises_5();
-        for (int x: exercises_5.returnArrayInCorrectForm(10)
-             ) {
+        for (int x : exercises_5.returnArrayInCorrectForm(10)
+        ) {
             System.out.print(x + " ");
         }
     }
 
-    public int [] returnArrayInCorrectForm(int inputArraySize){
+    public int[] returnArrayInCorrectForm(int inputArraySize) {
         Random random = new Random();
         int firstCounter = 0;
         int secondCounter = 0;
         int finallyBuffer = 0;
-        int [] mainArray = new int [inputArraySize];
-        int [] firstBufferArray = new int [inputArraySize / 2];
-        int [] secondBufferArray = new int [inputArraySize / 2];
-        int [] finalArrayOutPut = new int [inputArraySize];
+        int[] mainArray = new int[inputArraySize];
+        int[] firstBufferArray = new int[inputArraySize / 2];
+        int[] secondBufferArray = new int[inputArraySize / 2];
+        int[] finalArrayOutPut = new int[inputArraySize];
 
         for (int i = 0; i < mainArray.length; i++) {
             mainArray[i] = random.nextInt(100);
@@ -35,10 +35,10 @@ public class Exercises_5 {
         }
 
         for (int i = 0; i < mainArray.length; i++) {
-            if (i < mainArray.length / 2){
+            if (i < mainArray.length / 2) {
                 firstBufferArray[firstCounter] = mainArray[i];
                 firstCounter++;
-            } else{
+            } else {
                 secondBufferArray[secondCounter] = mainArray[i];
                 secondCounter++;
             }
@@ -57,11 +57,11 @@ public class Exercises_5 {
 
         for (int i = 0; i < mainArray.length; i++) {
             try {
-              finalArrayOutPut[i] = firstBufferArray[finallyBuffer];
-              finalArrayOutPut[i + 1] = secondBufferArray[finallyBuffer];
-              i++;
-              finallyBuffer++;
-        } catch (Exception e){
+                finalArrayOutPut[i] = firstBufferArray[finallyBuffer];
+                finalArrayOutPut[i + 1] = secondBufferArray[finallyBuffer];
+                i++;
+                finallyBuffer++;
+            } catch (Exception e) {
                 continue;
             }
         }

@@ -19,24 +19,24 @@ public class Exercises_10 {
         String s = "";
         int returnNum = 0;
 
-        char [] incomeNum = (num + "").toCharArray();
-        int [] intArray = new int [incomeNum.length];
+        char[] incomeNum = (num + "").toCharArray();
+        int[] intArray = new int[incomeNum.length];
 
         for (int i = 0; i < incomeNum.length; i++) {
             intArray[i] = Integer.parseInt("" + incomeNum[i]);
         }
 
-            for (int k = 0; k < intArray.length - 1; k++) {
-                for (int l = 0; l < intArray.length - k - 1; l++) {
+        for (int k = 0; k < intArray.length - 1; k++) {
+            for (int l = 0; l < intArray.length - k - 1; l++) {
 
-                    if (intArray[l + 1] > intArray[l]){
-                        int temp = intArray[l];
-                        intArray[l] = intArray[l + 1];
-                        intArray[l + 1] = temp;
-                    }
-
+                if (intArray[l + 1] > intArray[l]) {
+                    int temp = intArray[l];
+                    intArray[l] = intArray[l + 1];
+                    intArray[l + 1] = temp;
                 }
+
             }
+        }
 
         for (int i = 0; i < intArray.length; i++) {
             s = s + intArray[i];

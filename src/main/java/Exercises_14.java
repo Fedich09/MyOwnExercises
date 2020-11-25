@@ -24,14 +24,14 @@ public class Exercises_14 {
         int buffer = 0;
         String s = text.toLowerCase();
         ArrayList<Character> characters = new ArrayList<>();
-        char [] textIn = s.toCharArray();
+        char[] textIn = s.toCharArray();
 
         for (int i = 0; i < textIn.length; i++) {
 
             for (int j = buffer; j < textIn.length; j++) {
-                if (textIn[i] == textIn[j] && i != j ){
+                if (textIn[i] == textIn[j] && i != j) {
 
-                    if (!characters.contains(textIn[i])){
+                    if (!characters.contains(textIn[i])) {
                         characters.add(textIn[i]);
                     }
                 }
@@ -39,7 +39,7 @@ public class Exercises_14 {
             buffer++;
         }
 
-       return characters.size();
+        return characters.size();
     }
 
 }

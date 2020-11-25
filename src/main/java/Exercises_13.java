@@ -27,36 +27,36 @@ public class Exercises_13 {
         ArrayList<String> namesWhoLike = new ArrayList<>();
         Collections.addAll(namesWhoLike, names);
 
-        if (namesWhoLike.size() == 0){
+        if (namesWhoLike.size() == 0) {
             buffer = 0;
-        }else if (namesWhoLike.size() == 1){
+        } else if (namesWhoLike.size() == 1) {
             buffer = 1;
-        }else if (namesWhoLike.size() == 2){
+        } else if (namesWhoLike.size() == 2) {
             buffer = 2;
-        }else if (namesWhoLike.size() == 3){
+        } else if (namesWhoLike.size() == 3) {
             buffer = 3;
-        }else {
+        } else {
             buffer = 4;
         }
 
-        switch (buffer){
-            case 0:{
+        switch (buffer) {
+            case 0: {
                 s = "no one likes this";
                 break;
             }
-            case 1:{
+            case 1: {
                 s = namesWhoLike.get(0) + " likes this";
                 break;
             }
-            case 2:{
+            case 2: {
                 s = namesWhoLike.get(0) + " and " + namesWhoLike.get(1) + " like this";
                 break;
             }
-            case 3:{
-                s = namesWhoLike.get(0) + ", " + namesWhoLike.get(1) +  " and " + namesWhoLike.get(2) + " like this";
+            case 3: {
+                s = namesWhoLike.get(0) + ", " + namesWhoLike.get(1) + " and " + namesWhoLike.get(2) + " like this";
                 break;
             }
-            case 4:{
+            case 4: {
                 s = namesWhoLike.get(0) + ", " + namesWhoLike.get(1) + " and " + (namesWhoLike.size() - 2) + " others like this";
             }
         }
