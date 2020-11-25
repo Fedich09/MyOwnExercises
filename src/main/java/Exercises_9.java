@@ -19,20 +19,20 @@ public class Exercises_9 {
         String input = s;
         String output = "";
         ArrayList<String> finalArray = new ArrayList<>();
-        char [] incomeString = input.toCharArray();
+        char[] incomeString = input.toCharArray();
 
         for (int i = 0; i < incomeString.length; i++) {
 
             for (int j = 0; j < buffer; j++) {
-                if (j == 0){
+                if (j == 0) {
                     incomeString[i] = Character.toUpperCase(incomeString[i]);
                     finalArray.add(Character.toString(incomeString[i]));
-                }else {
+                } else {
                     incomeString[i] = Character.toLowerCase(incomeString[i]);
                     finalArray.add(Character.toString(incomeString[i]));
                 }
             }
-            if (i == incomeString.length - 1){
+            if (i == incomeString.length - 1) {
                 continue;
             } else {
                 finalArray.add("-");

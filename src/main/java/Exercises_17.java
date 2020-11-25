@@ -31,13 +31,13 @@ If you are given an array with multiple answers, return the lowest correct index
 
 public class Exercises_17 {
     public static void main(String[] args) {
-        System.out.println(findEvenIndex(new int[] {4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4}));
+        System.out.println(findEvenIndex(new int[]{4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4}));
     }
 
     public static int findEvenIndex(int[] arr) {
 
         int returnIndex = -1;
-        int [] arrBuffer = arr;
+        int[] arrBuffer = arr;
         int leftSum = 0;
         int rightSum = 0;
 
@@ -48,14 +48,14 @@ public class Exercises_17 {
 
             for (int j = 0; j < arrBuffer.length; j++) {
 
-                if (j < i){
+                if (j < i) {
                     leftSum += arrBuffer[j];
-                } else if (j > i){
+                } else if (j > i) {
                     rightSum += arrBuffer[j];
                 }
             }
 
-            if (leftSum == rightSum){
+            if (leftSum == rightSum) {
                 returnIndex = i;
                 break;
             }

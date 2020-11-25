@@ -22,13 +22,14 @@ public class Exercises_7 {
         System.out.println(exercises_7.correctValueReturn("ATTGC"));
 
     }
-    public String correctValueReturn(String s){
+
+    public String correctValueReturn(String s) {
         String output = "";
-        char [] inputFirstForm = s.toCharArray();
-        char [] inputSecondForm = new char[inputFirstForm.length];
+        char[] inputFirstForm = s.toCharArray();
+        char[] inputSecondForm = new char[inputFirstForm.length];
 
         for (int i = 0; i < inputFirstForm.length; i++) {
-            switch (inputFirstForm[i]){
+            switch (inputFirstForm[i]) {
                 case 'A':
                     inputSecondForm[i] = 'T';
                     break;

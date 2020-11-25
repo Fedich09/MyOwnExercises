@@ -8,31 +8,32 @@ are finished, you are welcome to read or run a suggested solution, or to post yo
 in the comments below. */
 public class Exercises_2 {
     public static void main(String[] args) {
-        class Input{
-            public String inputString(){
+        class Input {
+            public String inputString() {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextLine();
             }
-            public int string_in_int_out(String s){
+
+            public int string_in_int_out(String s) {
                 int sum = 0;
-                char [] inputValue = s.toCharArray();
-                char [] numbers = new char [inputValue.length + 1];
+                char[] inputValue = s.toCharArray();
+                char[] numbers = new char[inputValue.length + 1];
                 for (int i = 0; i < inputValue.length; i++) {
-                    if (Character.isDigit(inputValue[i])){
+                    if (Character.isDigit(inputValue[i])) {
                         numbers[i] = inputValue[i];
-                    }else {
+                    } else {
                         continue;
                     }
                 }
                 String buffer = "";
                 for (int i = 0; i < numbers.length; i++) {
-                    if (!Character.isDigit(numbers[i])){
+                    if (!Character.isDigit(numbers[i])) {
                         continue;
-                    }else if(Character.isDigit(numbers[i])){
+                    } else if (Character.isDigit(numbers[i])) {
                         buffer += numbers[i];
-                        if (!Character.isDigit(numbers[i + 1])){
-                           sum += Integer.parseInt(buffer);
-                           buffer = "";
+                        if (!Character.isDigit(numbers[i + 1])) {
+                            sum += Integer.parseInt(buffer);
+                            buffer = "";
                         }
                     }
                 }

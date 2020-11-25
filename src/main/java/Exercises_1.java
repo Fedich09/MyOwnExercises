@@ -12,15 +12,15 @@ in the comments below. */
 public class Exercises_1 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        while (solution.getCounter_fingers() < 1000){
+        while (solution.getCounter_fingers() < 1000) {
             solution.setCounter_fingers(solution.getCounter_fingers() + 4);
             solution.setCounter_iterations(solution.getCounter_iterations() + 1);
         }
         System.out.println(solution.getCounter_iterations());
         solution.setCounter_fingers(solution.getCounter_fingers() - 1);
-        if(solution.getCounter_iterations() % 2 == 0){
+        if (solution.getCounter_iterations() % 2 == 0) {
             System.out.println("Girl stop count on index finger");
-        }else {
+        } else {
             System.out.println("Girl stop count on ring finger");
         }
     }
@@ -28,15 +28,19 @@ public class Exercises_1 {
     public static class Solution {
         private int counter_fingers = 5;
         private int counter_iterations = 1;
+
         public int getCounter_fingers() {
             return counter_fingers;
         }
-        public void setCounter_fingers(int counter_fingers){
+
+        public void setCounter_fingers(int counter_fingers) {
             this.counter_fingers = counter_fingers;
         }
+
         public int getCounter_iterations() {
             return counter_iterations;
         }
+
         public void setCounter_iterations(int counter_iterations) {
             this.counter_iterations = counter_iterations;
         }

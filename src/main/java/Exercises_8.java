@@ -15,24 +15,21 @@ public class Exercises_8 {
         System.out.println(exercises_8.validatePin(""));
         System.out.println(Character.isDigit('j'));
     }
+
     public boolean validatePin(String pin) {
         int counter = 0;
         boolean check = false;
-        char [] inputPin = pin.toCharArray();
+        char[] inputPin = pin.toCharArray();
 
         for (int i = 0; i < inputPin.length; i++) {
-            if (Character.isDigit(inputPin[i]) && (inputPin.length == 4 || inputPin.length == 6)){
+            if (Character.isDigit(inputPin[i]) && (inputPin.length == 4 || inputPin.length == 6)) {
                 continue;
-            }else {
+            } else {
                 counter++;
             }
         }
-        if (counter > 0){
-            check = false;
-        }else {
-            check = true;
-        }
-        if (pin.isEmpty()){
+        check = counter <= 0;
+        if (pin.isEmpty()) {
             check = false;
         }
 

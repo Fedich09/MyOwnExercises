@@ -11,7 +11,7 @@ only). It will never give you an empty array (that's not a walk, that's standing
 
 public class Exercises_15 {
     public static void main(String[] args) {
-        System.out.println(isValid(new char[] {'n','n','n','s','n','s','n','s','n','s'}));
+        System.out.println(isValid(new char[]{'n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
     }
 
     public static boolean isValid(char[] walk) {
@@ -23,20 +23,20 @@ public class Exercises_15 {
         int w = 0;
         int e = 0;
 
-        for (char c: walk) {
-            switch (c){
-                case 'n':{
+        for (char c : walk) {
+            switch (c) {
+                case 'n': {
                     n++;
                     break;
                 }
                 case 's':
                     s++;
                     break;
-                case 'w':{
+                case 'w': {
                     w++;
                     break;
                 }
-                case 'e':{
+                case 'e': {
                     e++;
                     break;
                 }
@@ -44,11 +44,7 @@ public class Exercises_15 {
 
         }
 
-        if (n - s == 0 && w - e == 0 &&  n + s + w + e == 10 ){
-            trueOrFalse = true;
-        }else {
-            trueOrFalse = false;
-        }
+        trueOrFalse = n - s == 0 && w - e == 0 && n + s + w + e == 10;
 
         return trueOrFalse;
     }
